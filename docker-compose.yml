@@ -1,8 +1,11 @@
 services:
   app:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    #build:
+    #  context: .
+    #  dockerfile: Dockerfile
+    images: ghcr.io/rinex20/mindsearch:main
+    environment:
+      - OPENAI_API_KEY: sk-xxx
     ports:
       - "8000:8000"
     deploy:
